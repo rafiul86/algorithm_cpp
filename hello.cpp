@@ -1,13 +1,15 @@
 #include <iostream>
- 
+#include <vector>
+
+using std::vector;
+using std ::cout;
 
 
 int main()
 {
-    using namespace std;
-    const int integer = 4543;
-    int mynumber = 32;
-    cout<<"The value of integer is " <<"\n" <<integer <<"\n" <<mynumber<< endl;
-    cout<< sizeof(integer) <<endl <<sizeof(mynumber);
-    return 0;
+    vector<int> v{6,7,8,9};
+    for(int i:v)
+    {
+        cout << i << " ";
+    }
 }
