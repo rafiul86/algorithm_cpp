@@ -4,12 +4,10 @@
 using std::vector;
 using std ::cout;
 
-
-int main()
-{
-    vector<int> v{6,7,8,9};
-    for(int i:v)
-    {
-        cout << i << " ";
-    }
+int main() {
+    // Declare and initialize v using auto here.
+    auto v = {7,8,9,10};
+    for(auto j:v)
+        cout << j << " ";
+    cout<< "\n";
 }
