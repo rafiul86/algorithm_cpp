@@ -5,9 +5,12 @@ using std::vector;
 using std ::cout;
 
 int main() {
-    // Declare and initialize v using auto here.
-    auto v = {7,8,9,10};
-    for(auto j:v)
-        cout << j << " ";
-    cout<< "\n";
+    vector<vector<int>> board;
+    board = {{0, 1, 0, 0, 0, 0},
+{0, 1, 0, 0, 0, 0},
+{0, 1, 0, 0, 0, 0},
+{0, 1, 0, 0, 0, 0},
+{0, 0, 0, 0, 1, 0}};
+    int row = board.size();
+    cout<< row << "\n";
 }
