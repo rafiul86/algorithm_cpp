@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
+ int add(int i, int j)
+ {
+     return i + j;
+ }
+
  int main()
  {
-     int A[4];
-        A[0]=1;
-        A[1]=2;
-        A[2]=3;
-    for (int i=0;i<3; i++){
-        cout<<A[i]<<endl;
-    }
+     int i = 1, j = 2;
+     cout << add(i, j) << endl;
      return 0;
  }
