@@ -12,10 +12,15 @@ void PrintBoard(vector<vector<int>> v){
   }
 }
 int main() {
-  vector<vector<int>> board{{0, 1, 0, 0, 0, 0},
+  bool logic = true;
+  if (logic){
+      vector<vector<int>> board{{0, 1, 0, 0, 0, 0},
                             {0, 1, 0, 0, 0, 0},
                             {0, 1, 0, 0, 0, 0},
                             {0, 1, 0, 0, 0, 0},
                             {0, 0, 0, 0, 1, 0}};
   PrintBoard(board);
+  } else {
+      cout << "Your logic isn't true" << "\n";
+  }
  }
