@@ -1,13 +1,30 @@
+/**********************************************
+*programmer: rafiul
+
+*c++ program to get user input through console
+
+*18th march 2022
+***********************************************/
+
+
+
 #include <iostream>
 #include <vector>
 
 using namespace std;
 
 int main() {
-    int favourite_number;
+    int favourite_number;  // declaration of variable
     cout << "Enter your favourite number: ";
+    // get user input
     cin >> favourite_number;
-    cout << "Your favourite number is " << favourite_number << endl;
+    if (favourite_number < 42) {
+        cout << "You assumption is so close!" << endl;
+    } else if (favourite_number < 82) {
+        cout << "You are not wrong!" << endl;
+    } else {
+        cout << "You are wrong!" << endl;
+    }
 }
 
 // void PrintBoard(vector<vector<int>> v){
