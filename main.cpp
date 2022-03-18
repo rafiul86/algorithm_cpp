@@ -1,15 +1,13 @@
-
-#include <fstream>
 #include <iostream>
-#include <string>
+#include <vector>
 
-int main()
-{
-    std::ifstream my_file;
-    my_file.open("hello");
-    if (my_file) {
-      std::cout << "The file stream has been created!" << "\n";
-    }    
+using namespace std;
+
+int main() {
+    int favourite_number;
+    cout << "Enter your favourite number: ";
+    cin >> favourite_number;
+    cout << "Your favourite number is " << favourite_number << endl;
 }
 
 // void PrintBoard(vector<vector<int>> v){
@@ -21,7 +19,7 @@ int main()
 //   }
 // }
 // int main() {
-//   bool logic = false;
+//   bool logic = true;
 //   if (logic){
 //       vector<vector<int>> board{{0, 1, 0, 0, 0, 0},
 //                             {0, 1, 0, 0, 0, 0},
