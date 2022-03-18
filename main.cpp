@@ -1,13 +1,21 @@
 #include <iostream>
-using namespace std;
- int add(int i, int j)
- {
-     return i + j;
- }
+#include <vector>
+using std::cout;
+using std::vector;
 
- int main()
- {
-     int i = 1, j = 2;
-     cout << add(i, j) << endl;
-     return 0;
+void PrintBoard(vector<vector<int>> v){
+  for (auto i:v){
+  	for(auto j:i){
+    	cout << j << " ";
+    }
+    cout << "\n";
+  }
+}
+int main() {
+  vector<vector<int>> board{{0, 1, 0, 0, 0, 0},
+                            {0, 1, 0, 0, 0, 0},
+                            {0, 1, 0, 0, 0, 0},
+                            {0, 1, 0, 0, 0, 0},
+                            {0, 0, 0, 0, 1, 0}};
+  PrintBoard(board);
  }
