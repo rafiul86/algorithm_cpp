@@ -12,7 +12,7 @@ void PrintBoard(vector<vector<int>> v){
   }
 }
 int main() {
-  bool logic = true;
+  bool logic = false;
   if (logic){
       vector<vector<int>> board{{0, 1, 0, 0, 0, 0},
                             {0, 1, 0, 0, 0, 0},
@@ -21,6 +21,10 @@ int main() {
                             {0, 0, 0, 0, 1, 0}};
   PrintBoard(board);
   } else {
-      cout << "Your logic isn't true" << "\n";
+      int a = 5;
+      while (a >= 2){
+          cout << a << "\n";
+          a--;
+      }
   }
  }
