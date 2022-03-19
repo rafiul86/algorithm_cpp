@@ -21,7 +21,7 @@ int main() {
     long double a {1.76886648};
     long double *p;
     p = &a;
-    cout << "value of a is " << a << endl;
+    cout << "value of pointer p is " << *p << endl;
     return 0;
 }
 
