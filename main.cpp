@@ -15,6 +15,10 @@ using std::cout;
 using std::string;
 using std::vector;;
 
+void ReadBoardFile(){
+    
+}
+
 // int main() {
 //     int favourite_number;  // declaration of variable
 //     cout << "Enter your favourite number: ";
