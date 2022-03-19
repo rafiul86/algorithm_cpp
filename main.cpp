@@ -15,19 +15,46 @@ using namespace std;
 using std::string;
 using std::vector;;
 
-
+struct Rectangle{
+    int length;
+    int width;
+};
 
 int main() {
+    int a {12};
+    int &r = a;
+    r++;
     int *p;
-    p = new int[6];
-    p[0] = 10;
-    p[1] = 20;
-    p[2] = 30;
-    p[3] = 40;
-    p[4] = 50;
-    for (int i=0; i<6; i++) {
-        cout << p[i] << endl;
-    }
+    char *p1;
+    string *p2;
+    vector<int> *p3;
+    vector<string> *p4;
+    vector<char> *p5;
+    vector<vector<int>> *p6;
+    vector<vector<string>> *p7;
+    vector<vector<char>> *p8;
+    struct Rectangle *p9;
+    // p = new int[6];
+    // p[0] = 10;
+    // p[1] = 20;
+    // p[2] = 30;
+    // p[3] = 40;
+    // p[4] = 50;
+    // for (int i=0; i<6; i++) {
+    //     cout << p[i] << endl;
+    // }
+    // cout << sizeof(*p) << endl;
+    // cout << sizeof(*p1) << endl;
+    // cout << sizeof(*p2) << endl;
+    // cout << sizeof(*p3) << endl;
+    // cout << sizeof(*p4) << endl;
+    // cout << sizeof(*p5) << endl;
+    // cout << sizeof(*p6) << endl;
+    // cout << sizeof(*p7) << endl;
+    // cout << sizeof(*p8) << endl;
+    // cout << sizeof(*p9) << endl;
+    cout << a << endl;
+
     return 0;
 }
 
