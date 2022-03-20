@@ -13,7 +13,7 @@
 #include <vector>
 using namespace std;
 using std::string;
-using std::vector;;
+using std::vector;
 
 struct Rectangle{
     int length;
