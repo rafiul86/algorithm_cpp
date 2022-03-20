@@ -11,23 +11,18 @@ using std::vector;
 //     int width;
 // };
 
-int add(int a, int b) {
+void swap(int A[]) {
 
-    int c;
-    a++;
-    b++;
-    c = a + b;
-    return c;
+   for (int i=0; i<6; i++) {
+       cout << A[i] << " ";
+   }
 }
 
 int main(){
 
-    int num1 = 10; 
-    int num2 = 20;
-
-    cout << "The sum of " << num1 << " and " << num2 << " is " << add(num1, num2) << endl;
-    cout << "num1: " << num1 << endl;
-    cout << "num2: " << num2 << endl;
+    int A[6] {2, 5, 7, 3, 6, 9};
+    swap(A);
+    return 0;
     // pointer to struct Rectangle
     // struct Rectangle *p;
 
