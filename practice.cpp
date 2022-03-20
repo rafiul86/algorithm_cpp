@@ -11,27 +11,18 @@ using std::vector;
 //     int width;
 // };
 
-void swap(int A[]) {
+struct Rectangle{
+    int length;
+    int width;
+};
 
-   for (int i=0; i<6; i++) {
-       cout << A[i] << " ";
-   }
+void print_rectangle(Rectangle r){
+    cout << r.length << " " << r.width << endl;
 }
 
-int main(){
+int main () {
+Rectangle rect = {10, 20};
+print_rectangle(rect);
 
-    int A[6] {2, 5, 7, 3, 6, 9};
-    swap(A);
-    return 0;
-    // pointer to struct Rectangle
-    // struct Rectangle *p;
-
-    // p =  new Rectangle;
-
-    // p->length = 10;
-    // p->width = 20;
-
-    // cout << p->length << endl;
-    // cout << p->width << endl;
 
 }
