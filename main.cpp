@@ -21,19 +21,19 @@ struct Rectangle{
 };
 
 int main() {
-    int a {12};
-    int &r = a;
-    r++;
-    int *p;
-    char *p1;
-    string *p2;
-    vector<int> *p3;
-    vector<string> *p4;
-    vector<char> *p5;
-    vector<vector<int>> *p6;
-    vector<vector<string>> *p7;
-    vector<vector<char>> *p8;
-    struct Rectangle *p9;
+    // int a {12};
+    // int &r = a;
+    // r++;
+    // int *p;
+    // char *p1;
+    // string *p2;
+    // vector<int> *p3;
+    // vector<string> *p4;
+    // vector<char> *p5;
+    // vector<vector<int>> *p6;
+    // vector<vector<string>> *p7;
+    // vector<vector<char>> *p8;
+    // struct Rectangle *p9;
     // p = new int[6];
     // p[0] = 10;
     // p[1] = 20;
@@ -53,8 +53,12 @@ int main() {
     // cout << sizeof(*p7) << endl;
     // cout << sizeof(*p8) << endl;
     // cout << sizeof(*p9) << endl;
-    cout << a << endl;
-
+    // cout << a << endl;
+    int num_array [5] { 2, 5, 7, 3, 6};
+    num_array[3] = 22;
+    for (int i=0; i<5; i++) {
+        cout << num_array[i] << endl;
+    }
     return 0;
 }
 
