@@ -20,6 +20,12 @@ struct Rectangle{
     int width;
 };
 
+vector<string> value_of_vector(){
+    vector<string> vector_of_ints {"name", "age", "address"};
+    vector_of_ints.push_back("profession");
+    cout << vector_of_ints[3] << endl;
+}
+
 int main() {
     // int a {12};
     // int &r = a;
@@ -59,20 +65,21 @@ int main() {
     // for (int i=0; i<5; i++) {
     //     cout << num_array[i] << endl;
     // }
-    int array_of_ints [3] [4] {
-        {1, 2, 3, 4},
-        {4, 5, 6, 7},
-        {7, 8, 9, 8}
-    };
+    // int array_of_ints [3] [4] {
+    //     {1, 2, 3, 4},
+    //     {4, 5, 6, 7},
+    //     {7, 8, 9, 8}
+    // };
+    
     // cin >> array_of_ints[0];
     // cin >> array_of_ints[1];
     // cin >> array_of_ints[2];
     // cin >> array_of_ints[3];
     // cin >> array_of_ints[4];
-
-    cout << "1st number is: " << array_of_ints[0] [1] << endl;
-    cout << "2nd number is: " << array_of_ints[1] [2]<< endl;
-    cout << "3rd number is: " << array_of_ints[2] [3] << endl;
+    value_of_vector();
+    // cout << "1st number is: " << array_of_ints[0] [1] << endl;
+    // cout << "2nd number is: " << array_of_ints[1] [2]<< endl;
+    // cout << "3rd number is: " << array_of_ints[2] [3] << endl;
     
     return 0;
 }
