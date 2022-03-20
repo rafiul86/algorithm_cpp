@@ -1,28 +1,19 @@
-#include<iostream>
-#include<string>
-#include<vector>
+#include <iostream>
+#include <sstream>
+#include <string>
 
-using namespace std;
-using std::vector;
-
-// definition of struct
-// struct Rectangle{
-//     int length;
-//     int width;
-// };
-
-struct Rectangle{
-    int length;
-    int width;
-};
-
-void print_rectangle(Rectangle r){
-    cout << r.length << " " << r.width << endl;
-}
+using std::istringstream;
+using std::string;
+using std::cout;
 
 int main () {
-Rectangle rect = {10, 20};
-print_rectangle(rect);
+    string a("1 3 4 6");
+    istringstream my_stream (a);
 
+    int p;
 
+    while(my_stream >> p){
+        cout << "my number: " << p << "\n";
+    }
+    cout << "Failed" << "\n";
 }
