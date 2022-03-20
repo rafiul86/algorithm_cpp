@@ -54,11 +54,26 @@ int main() {
     // cout << sizeof(*p8) << endl;
     // cout << sizeof(*p9) << endl;
     // cout << a << endl;
-    int num_array [5] { 2, 5, 7, 3, 6};
-    num_array[3] = 22;
-    for (int i=0; i<5; i++) {
-        cout << num_array[i] << endl;
-    }
+    // int num_array [5] { 2, 5, 7, 3, 6};
+    // num_array[3] = 22;
+    // for (int i=0; i<5; i++) {
+    //     cout << num_array[i] << endl;
+    // }
+    int array_of_ints [3] [4] {
+        {1, 2, 3, 4},
+        {4, 5, 6, 7},
+        {7, 8, 9, 8}
+    };
+    // cin >> array_of_ints[0];
+    // cin >> array_of_ints[1];
+    // cin >> array_of_ints[2];
+    // cin >> array_of_ints[3];
+    // cin >> array_of_ints[4];
+
+    cout << "1st number is: " << array_of_ints[0] [1] << endl;
+    cout << "2nd number is: " << array_of_ints[1] [2]<< endl;
+    cout << "3rd number is: " << array_of_ints[2] [3] << endl;
+    
     return 0;
 }
 
