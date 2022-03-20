@@ -6,14 +6,17 @@ using std::istringstream;
 using std::string;
 using std::cout;
 
-int main () {
-    string a("1 3 4 6");
-    istringstream my_stream (a);
+int main() 
+{
+    string b("1,2,3p");
 
-    int p;
+    istringstream my_stream(b);
 
-    while(my_stream >> p){
-        cout << "my number: " << p << "\n";
+    char c;
+    int n;
+
+    while (my_stream >> n >> c) {
+      cout << "That stream was successful:" << n << " " << c << "\n";
     }
-    cout << "Failed" << "\n";
+    cout << "The stream has failed." << "\n";
 }
