@@ -4,19 +4,47 @@
 
 using std::istringstream;
 using std::string;
-using std::cout;
+using namespace std;
 
 int main() {
 
-int num1 = 3;
-int num2 = 5;
+int amount;
+int hundred_note;
+int fifty_note;
+int twenty_note;
+int ten_note;
+int five_note;
+int one_note;
 
-   bool locked;
-   if (num1 > num2){
-      locked = true;
-   }
-   cout << std:: boolalpha << locked << "\n";
-    return 0;
+int balance;
+
+cout << "Enter the amount of money you have: ";
+cin >> amount;
+
+hundred_note = amount / 100;
+balance = amount - (hundred_note * 100);
+
+fifty_note = balance / 50;
+balance = balance - (fifty_note * 50);
+
+twenty_note = balance / 20;
+balance = balance - (twenty_note * 20);
+
+ten_note = balance / 10;
+balance = balance - (ten_note * 10);
+
+five_note = balance / 5;
+balance = balance - (five_note * 5);
+
+one_note = balance / 1;
+
+cout << "hundred note: " << hundred_note << endl;
+cout << "fifty note: " << fifty_note << endl;
+cout << "twenty note: " << twenty_note << endl;
+cout << "ten note: " << ten_note << endl;
+cout << "five note: " << five_note << endl;
+cout << "one note: " << one_note << endl;
+return 0;
 
 
 }
