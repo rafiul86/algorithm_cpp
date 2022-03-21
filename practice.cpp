@@ -22,19 +22,19 @@ cout << "Enter the amount of money you have: ";
 cin >> amount;
 
 hundred_note = amount / 100;
-balance = amount - (hundred_note * 100);
+balance = amount % 100;
 
 fifty_note = balance / 50;
-balance = balance - (fifty_note * 50);
+balance = balance % 50;
 
 twenty_note = balance / 20;
-balance = balance - (twenty_note * 20);
+balance = balance % 20;
 
 ten_note = balance / 10;
-balance = balance - (ten_note * 10);
+balance = balance % 10;
 
 five_note = balance / 5;
-balance = balance - (five_note * 5);
+balance = balance % 5;
 
 one_note = balance / 1;
 
