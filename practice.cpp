@@ -6,16 +6,17 @@ using std::istringstream;
 using std::string;
 using std::cout;
 
-int main() 
-{
-   int num1 {4}, num2 {2}, num3 {1}, num4 {3};
-   int count {4};
-   int total = num1 + num2 + num3 + num4 ;
-   double average {0.0};
-   
-    average = static_cast<double>(total) / count;
-  
-   cout << average << "\n";
+int main() {
+
+int num1 = 3;
+int num2 = 5;
+
+   bool locked;
+   if (num1 > num2){
+      locked = true;
+   }
+   cout << std:: boolalpha << locked << "\n";
+    return 0;
 
 
 }
