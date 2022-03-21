@@ -8,6 +8,13 @@ using namespace std;
 
 int main() {
 
+const int hundred_note_divider {100};
+const int fifty_note_divider {50};
+const int twenty_note_divider {20};
+const int ten_note_divider {10};
+const int five_note_divider {5};
+
+
 int amount;
 int hundred_note;
 int fifty_note;
@@ -21,22 +28,22 @@ int balance;
 cout << "Enter the amount of money you have: ";
 cin >> amount;
 
-hundred_note = amount / 100;
+hundred_note = amount / hundred_note_divider;
 balance = amount % 100;
 
-fifty_note = balance / 50;
-balance = balance % 50;
+fifty_note = balance / fifty_note_divider;
+balance %=  50;
 
-twenty_note = balance / 20;
-balance = balance % 20;
+twenty_note = balance / twenty_note_divider;
+balance %=  20;
 
-ten_note = balance / 10;
-balance = balance % 10;
+ten_note = balance / ten_note_divider;
+balance %=  10;
 
-five_note = balance / 5;
-balance = balance % 5;
+five_note = balance / five_note_divider;
+balance %=  5;
 
-one_note = balance / 1;
+one_note = balance;
 
 cout << "hundred note: " << hundred_note << endl;
 cout << "fifty note: " << fifty_note << endl;
