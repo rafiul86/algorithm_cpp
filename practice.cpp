@@ -28,20 +28,22 @@ int balance;
 cout << "Enter the amount of money you have: ";
 cin >> amount;
 
+
+balance = amount;
 hundred_note = amount / hundred_note_divider;
-balance = amount % 100;
+balance = balance - (hundred_note * hundred_note_divider);
 
 fifty_note = balance / fifty_note_divider;
-balance %=  50;
+balance =  balance - (fifty_note * fifty_note_divider);
 
 twenty_note = balance / twenty_note_divider;
-balance %=  20;
+balance =  balance - (twenty_note * twenty_note_divider);
 
 ten_note = balance / ten_note_divider;
-balance %=  10;
+balance = balance - (ten_note * ten_note_divider);
 
 five_note = balance / five_note_divider;
-balance %=  5;
+balance = balance - (five_note * five_note_divider);
 
 one_note = balance;
 
