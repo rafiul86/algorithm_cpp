@@ -8,15 +8,11 @@ using std::cout;
 
 int main() 
 {
-    string b("1,2,3p");
+    int counter{10};
+    int result{10};
 
-    istringstream my_stream(b);
+    result = counter--;
+    cout << "result: " << result << "\n";
+    cout << "counter: " << counter << "\n";
 
-    char c;
-    int n;
-
-    while (my_stream >> n >> c) {
-      cout << "That stream was successful:" << n << " " << c << "\n";
-    }
-    cout << "The stream has failed." << "\n";
 }
