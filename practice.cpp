@@ -9,8 +9,9 @@ using namespace std;
 // enum class Direction { North, South, East, West };
 
 int main () {
-    short int x = 32767;
-    cout << x++ << endl;
-    cout << x << endl;
+    int x = 3, y = 7;
+    int z = x & y;
+    cout << z << endl;
+   
     return 0;
     }
