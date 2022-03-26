@@ -9,16 +9,20 @@ using namespace std;
 #include<iostream>
 using namespace std;
 
-void Max3(int a,int b,int c)
+void Max3(int a,int b,int c, int d)
 {
-    if (a > b && a > c){
+    if (a > b && a > c && a > d){
         cout << "a";
         
     } else {
-        if(b > c){
+        if(b > c && b > d){
             cout << "b";
         }else{
-            cout << "c";
+            if(c > d){
+                cout << "c";
+            }else{
+                cout << "d";
+            }
         }
     }
 //write nested if statements to print maximum of 3 numbers
@@ -26,7 +30,12 @@ void Max3(int a,int b,int c)
 }
 
 int main () {
-    Max3(4,6,3);
+    // Max3(34,26,63,29);
+    int array_of_numbers[5] {34,26,63,29};
+    array_of_numbers[4] = 56;
+    for(int i = 0; i <= 4 ; i++){
+        cout << array_of_numbers[i] << endl;
+    }
    
     return 0;
     }
