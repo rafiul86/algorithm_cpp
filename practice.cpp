@@ -6,12 +6,27 @@ using std::istringstream;
 using std::string;
 using namespace std;
 
-// enum class Direction { North, South, East, West };
+#include<iostream>
+using namespace std;
+
+void Max3(int a,int b,int c)
+{
+    if (a > b && a > c){
+        cout << "a";
+        
+    } else {
+        if(b > c){
+            cout << "b";
+        }else{
+            cout << "c";
+        }
+    }
+//write nested if statements to print maximum of 3 numbers
+    
+}
 
 int main () {
-    int x = 13, y = 7;
-    int z = ~x;
-    cout << z << endl;
+    Max3(4,6,3);
    
     return 0;
     }
