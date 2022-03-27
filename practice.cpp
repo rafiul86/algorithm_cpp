@@ -30,12 +30,17 @@ void Max3(int a,int b,int c, int d)
 }
 
 int main () {
-    // Max3(34,26,63,29);
-    int array_of_numbers[5] {34,26,63,29};
-    array_of_numbers[4] = 56;
-    for(int i = 0; i <= 4 ; i++){
-        cout << array_of_numbers[i] << endl;
+    int number1;
+
+    while ( number1 <= 100  ){
+        if (number1 % 5 == 0 && number1 > 0){
+            if (number1%2==0){
+                continue;
+                
+            }
+            cout << number1 <<" ";
+            
+        }
+        ++number1;
     }
-   
-    return 0;
-    }
+}
