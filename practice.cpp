@@ -9,38 +9,16 @@ using namespace std;
 #include<iostream>
 using namespace std;
 
-void Max3(int a,int b,int c, int d)
+
+int factorial(int n)
 {
-    if (a > b && a > c && a > d){
-        cout << "a";
-        
-    } else {
-        if(b > c && b > d){
-            cout << "b";
-        }else{
-            if(c > d){
-                cout << "c";
-            }else{
-                cout << "d";
-            }
-        }
-    }
-//write nested if statements to print maximum of 3 numbers
-    
+    if (n == 0)
+        return 1;
+    else
+        return n * factorial(n - 1);
 }
 
 int main () {
-    int number1;
-
-    while ( number1 <= 100  ){
-        if (number1 % 5 == 0 && number1 > 0){
-            if (number1%2==0){
-                continue;
-                
-            }
-            cout << number1 <<" ";
-            
-        }
-        ++number1;
+    cout << factorial(10);
     }
-}
+
