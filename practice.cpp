@@ -12,10 +12,17 @@ using namespace std;
 
 int factorial(int n)
 {
-    if (n == 0)
-        return 1;
+    int fact{1};
+    if(n==0){
+    fact = 1;
+    }
     else
-        return n * factorial(n - 1);
+    {
+        for( int i = 1; i <= n; i++){
+            fact = fact * i;
+        }
+    }
+return fact;
 }
 
 int main () {
