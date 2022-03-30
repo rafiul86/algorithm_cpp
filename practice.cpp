@@ -9,27 +9,19 @@ using namespace std;
 #include<iostream>
 using namespace std;
 
-void Prime(int n)
+void Digit(int n)
 {
-    int count=0;
+    int digit;
     
-    for(int i=1; i<=n; i++){
+    while(n>0){
         
-        if(n%i==0)
-        {
-            count++;
-        }
-        
-    }
-    
-    if(count == 2)
-        cout<<count<<" prime";  
-    else
-        cout<<count<<" not prime";
-            
+      digit = n%10;
+      n=n/10;
+      cout<<digit<<" "; 
+    }            
 }
 
 int main(){
- Prime(23);
+ Digit(523);
 }
 
