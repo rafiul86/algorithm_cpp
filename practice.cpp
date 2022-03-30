@@ -9,27 +9,27 @@ using namespace std;
 #include<iostream>
 using namespace std;
 
-void Perfect(int n)
+void Prime(int n)
 {
-    int sum=0;
+    int count=0;
     
     for(int i=1; i<=n; i++){
         
         if(n%i==0)
         {
-            sum += i;
+            count++;
         }
         
     }
     
-    if(sum == n*2)
-        cout<<"perfect";  
+    if(count == 2)
+        cout<<count<<" prime";  
     else
-        cout<<"not perfect";
+        cout<<count<<" not prime";
             
 }
 
 int main(){
- Perfect(496);
+ Prime(23);
 }
 
