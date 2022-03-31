@@ -9,19 +9,13 @@ using namespace std;
 #include<iostream>
 using namespace std;
 
-void Digit(int n)
-{
-    int digit;
-    
-    while(n>0){
-        
-      digit = n%10;
-      n=n/10;
-      cout<<digit<<" "; 
-    }            
-}
+
 
 int main(){
- Digit(523);
+ int A[] = {2, 4, 5, 6};
+ for(int &a:A){
+  cout<<++a<<endl;
+ }
+ cout<<A[1]<<endl;
 }
 
