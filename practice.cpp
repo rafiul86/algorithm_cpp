@@ -12,10 +12,13 @@ using namespace std;
 
 
 int main(){
- int A[] = {2, 4, 5, 6};
- for(int &a:A){
-  cout<<++a<<endl;
+ int A[4] = {-552, 46, -5, 6};
+ int min=INT_MAX;
+ for(int i=0; i<4; i++){
+  if(A[i]<min){
+    min=A[i];
+  }
  }
- cout<<A[1]<<endl;
+ cout<<min<<endl;
 }
 
