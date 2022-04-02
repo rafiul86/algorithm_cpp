@@ -1,6 +1,6 @@
 #include <iostream>
 #include <sstream>
-#include <string>
+#include <cstring>
 
 using std::istringstream;
 using std::string;
@@ -12,9 +12,8 @@ using namespace std;
 
 
 int main(){
-  char s[20];
-  cout<<"Enter your name: ";
-  cin.get(s,20);
-  cout<<"Hello "<<s<<endl;
+  char s1[20]="programming";
+  char s2[10]="p";
+  cout<<strstr(s1,s2)<<endl;
 }
 
