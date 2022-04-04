@@ -2,7 +2,7 @@
 #include <sstream>
 #include <cstring>
 #include <vector>
-
+#include <numeric>
 using std::istringstream;
 using std::string;
 using namespace std;
@@ -13,10 +13,9 @@ using namespace std;
 
 
 int main(){
-  vector<string> brothers{"John", "Paul", "George", "Ringo"};
-  for(auto& brother:brothers){
-    cout << brother << endl;
-  }
-
+  vector<int> v {6, 2, 3};
+    
+    // using standard library function accumulate
+    cout << std::accumulate(v.begin(), v.end(), 0) << "\n";
 }
 
