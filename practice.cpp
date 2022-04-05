@@ -1,25 +1,39 @@
 #include <fstream>
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <vector>
 using std::cout;
 using std::ifstream;
+using std::istringstream;
 using std::string;
 using std::vector;
 
 
+vector<int> ParseLine(string line) {
+    istringstream sline(line);
+    int n;
+    char c;
+    vector<int> row;
+    while (sline >> n >> c && c == ',') {
+      row.push_back(n);
+    }
+    return row;
+}
 
-void ReadBoardFile(string path) {
+vector<vector<int>> ReadBoardFile(string path) {
   ifstream myfile (path);
+  vector<vector<int>> board{};
   if (myfile) {
     string line;
     while (getline(myfile, line)) {
-      cout << line << "\n";
+      vector<int> row = ParseLine(line);
+      board.push_back(row);
     }
   }
+  return board;
 }
 
-// PrintBoard not used in this exercise
 void PrintBoard(const vector<vector<int>> board) {
   for (int i = 0; i < board.size(); i++) {
     for (int j = 0; j < board[i].size(); j++) {
@@ -30,8 +44,6 @@ void PrintBoard(const vector<vector<int>> board) {
 }
 
 int main() {
-  // TODO: Call the ReadBoardFile function here.
-  ReadBoardFile("files/board");
-  // Leave the following line commented out.
-  // PrintBoard(board);
+  auto board = ReadBoardFile("1.board");
+  PrintBoard(board);
 }
