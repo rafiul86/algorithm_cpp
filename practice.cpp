@@ -1,32 +1,37 @@
+#include <fstream>
 #include <iostream>
-#include <sstream>
-#include <cstring>
+#include <string>
 #include <vector>
-#include <numeric>
-using std::istringstream;
+using std::cout;
+using std::ifstream;
 using std::string;
-using namespace std;
+using std::vector;
 
-#include<iostream>
-using namespace std;
 
-void PrintBoard(vector<vector<int>> v){
-    for(int i=0;i<v.size();i++){
-        for(int j=0;j<v[i].size();j++){
-            cout<<v[i][j]<<" ";
-        }
-        cout<<endl;
-    };
+
+void ReadBoardFile(string path) {
+  ifstream myfile (path);
+  if (myfile) {
+    string line;
+    while (getline(myfile, line)) {
+      cout << line << "\n";
+    }
+  }
 }
 
-int main(){
-  vector<vector<int>> board{
-                            { 0, 1, 0, 0, 0, 0 },
-                            { 0, 1, 0, 0, 0, 0 },
-                            { 0, 1, 0, 0, 0, 0 },
-                            { 0, 1, 0, 0, 0, 0 },
-                            { 0, 0, 0, 0, 1, 0 }
-  };
-  PrintBoard(board);
+// PrintBoard not used in this exercise
+void PrintBoard(const vector<vector<int>> board) {
+  for (int i = 0; i < board.size(); i++) {
+    for (int j = 0; j < board[i].size(); j++) {
+      cout << board[i][j];
+    }
+    cout << "\n";
+  }
 }
 
+int main() {
+  // TODO: Call the ReadBoardFile function here.
+  ReadBoardFile("files/board");
+  // Leave the following line commented out.
+  // PrintBoard(board);
+}
