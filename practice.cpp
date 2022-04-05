@@ -10,12 +10,23 @@ using namespace std;
 #include<iostream>
 using namespace std;
 
-
+void PrintBoard(vector<vector<int>> v){
+    for(int i=0;i<v.size();i++){
+        for(int j=0;j<v[i].size();j++){
+            cout<<v[i][j]<<" ";
+        }
+        cout<<endl;
+    };
+}
 
 int main(){
-  vector<int> v {6, 2, 3};
-    
-    // using standard library function accumulate
-    cout << std::accumulate(v.begin(), v.end(), 0) << "\n";
+  vector<vector<int>> board{
+                            { 0, 1, 0, 0, 0, 0 },
+                            { 0, 1, 0, 0, 0, 0 },
+                            { 0, 1, 0, 0, 0, 0 },
+                            { 0, 1, 0, 0, 0, 0 },
+                            { 0, 0, 0, 0, 1, 0 }
+  };
+  PrintBoard(board);
 }
 
