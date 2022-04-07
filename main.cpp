@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 using std::cout;
+using std::cin;
 using std::ifstream;
 using std::istringstream;
 using std::string;
@@ -44,8 +45,7 @@ void PrintBoard(const vector<vector<int>> board) {
 }
 
 int main() {
- string s = "Happy";
- string s2 = "Holiday";
- string s3 = s + ' ' + s2;
- cout<< s3 << "\n";
+char s[20];
+cin.get(s,20);
+cout<<s;
 }
