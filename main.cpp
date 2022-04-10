@@ -1,10 +1,12 @@
 #include <fstream>
 #include <iostream>
+#include <cstring>
 #include <sstream>
 #include <string>
 #include <vector>
 using std::cout;
 using std::cin;
+using std::endl;
 using std::ifstream;
 using std::istringstream;
 using std::string;
@@ -45,7 +47,11 @@ void PrintBoard(const vector<vector<int>> board) {
 }
 
 int main() {
-char s[20];
-cin.get(s,20);
-cout<<s;
+char s[10] = "235";
+char s2[10] = "235.78";
+long int x = strtol(s, NULL, 10);
+float y = strtof(s2, NULL);
+cout << x << endl;
+cout << y << endl;
+return 0;
 }
