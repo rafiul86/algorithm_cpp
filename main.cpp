@@ -47,11 +47,9 @@ void PrintBoard(const vector<vector<int>> board) {
 }
 
 int main() {
-char s[10] = "235";
-char s2[10] = "235.78";
-long int x = strtol(s, NULL, 10);
-float y = strtof(s2, NULL);
-cout << x << endl;
-cout << y << endl;
+string s;
+cout << "Enter greetings: ";
+cin >> s;
+cout << s.size() << endl;
 return 0;
 }
