@@ -56,11 +56,16 @@ void PrintBoard(const vector<vector<State>> board) {
 }
 
 int main() {
-  string str="15-150 crores within 10 years";
-  int count;
-  string::iterator it;
-  for(it=str.begin(); it!=str.end(); it++){
-    count++;
+  string str = "WELCOME";
+  string another;
+  char c;
+  for(int i = 0; i < str.size(); i++){
+    if(str[i] >= 65 && str[i] <= 97){
+      c = str[i] + 32;
+    }else{
+      c = str[i];
+    }
+    another.push_back(c);
   }
-  cout << count << "\n";
+  cout << another << "\n";
 }
