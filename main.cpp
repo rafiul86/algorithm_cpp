@@ -4,68 +4,24 @@
 #include <string>
 #include <vector>
 using std::cout;
+using std::cin;
+using std::endl;
 using std::ifstream;
 using std::istringstream;
 using std::string;
 using std::vector;
 
-enum class State {kEmpty, kObstacle};
-
-vector<State> ParseLine(string line) {
-    istringstream sline(line);
-    int n;
-    char c;
-    vector<State> row;
-    while (sline >> n >> c && c == ',') {
-      if (n == 0) {
-        row.push_back(State::kEmpty);
-      } else {
-        row.push_back(State::kObstacle);
-      }
-    }
-    return row;
+int add(int x, int y) {
+  int z;
+  z = x + y;
+  cout << "from add function " << x << " "<< y << " " << z << endl;
+  return z;
 }
 
-vector<vector<State>> ReadBoardFile(string path) {
-  ifstream myfile (path);
-  vector<vector<State>> board{};
-  if (myfile) {
-    string line;
-    while (getline(myfile, line)) {
-      vector<State> row = ParseLine(line);
-      board.push_back(row);
-    }
-  }
-  return board;
-}
-
-string CellString(State cell) {
-  switch(cell) {
-    case State::kObstacle: return "⛰️   ";
-    default: return "0   "; 
-  }
-}
-
-void PrintBoard(const vector<vector<State>> board) {
-  for (int i = 0; i < board.size(); i++) {
-    for (int j = 0; j < board[i].size(); j++) {
-      cout << CellString(board[i][j]);
-    }
-    cout << "\n";
-  }
-}
-
-int main() {
-  string str = "madam";
-  string pal;
-  for(int i=0; i<str.size(); i++){
-    pal = str[i] + pal;
-    
-  }
-  if(str==pal){
-    cout<<"palindrome";
-  }
-  else{
-    cout<<"not palindrome";
-  }
+int main(){
+  int a = 7, b = 3;
+  int c = add(a, b);
+  a++;
+  b++;
+  cout << "from main function " << a << " "<< b << " " << c << endl;
 }
