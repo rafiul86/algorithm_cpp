@@ -56,6 +56,11 @@ void PrintBoard(const vector<vector<State>> board) {
 }
 
 int main() {
-  auto board = ReadBoardFile("1.board");
-  PrintBoard(board);
+  string str="15-150 crores within 10 years";
+  int count;
+  string::iterator it;
+  for(it=str.begin(); it!=str.end(); it++){
+    count++;
+  }
+  cout << count << "\n";
 }
