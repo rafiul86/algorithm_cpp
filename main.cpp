@@ -56,20 +56,16 @@ void PrintBoard(const vector<vector<State>> board) {
 }
 
 int main() {
-  string str = "How are you today";
-  int vowel{0};
-  int consonant{0};
-  int space{0};
-  for(int i = 0; i < str.size(); i++) {
-    if (str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U' || str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
-      vowel++;
-        } 
-    else if (str[i] == ' ') {
-      space++;
-        }
-    else{
-      consonant++;
-        }
+  string str = "madam";
+  string pal;
+  for(int i=0; i<str.size(); i++){
+    pal = str[i] + pal;
+    
   }
-  cout << vowel << " " << consonant << " " << space+1 << "\n";
+  if(str==pal){
+    cout<<"palindrome";
+  }
+  else{
+    cout<<"not palindrome";
+  }
 }
