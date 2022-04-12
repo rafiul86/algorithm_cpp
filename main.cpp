@@ -11,17 +11,26 @@ using std::istringstream;
 using std::string;
 using std::vector;
 
-int add(int x, int y) {
-  int z;
-  z = x + y;
-  cout << "from add function " << x << " "<< y << " " << z << endl;
-  return z;
-}
+
 
 int main(){
-  int a = 7, b = 3;
-  int c = add(a, b);
-  a++;
-  b++;
-  cout << "from main function " << a << " "<< b << " " << c << endl;
+  vector<int> vec{0};
+  int num;
+  cin >> num;
+ vec.push_back(num);
+  if (vec[0] > vec[1] && vec[0] > vec[2])
+    {
+      cout << "1st number is the largest" << endl;
+    }
+  else {
+    if (vec[1] > vec[2]){
+    cout << "2nd is the largest" << endl;
+  }
+  else {
+    cout << "3rd is the largest" << endl;
+    
+  }
+  return 0;
+}
+ 
 }
