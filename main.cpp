@@ -13,24 +13,19 @@ using std::vector;
 
 
 
-int main(){
-  vector<int> vec{0};
-  int num;
-  cin >> num;
- vec.push_back(num);
-  if (vec[0] > vec[1] && vec[0] > vec[2])
-    {
-      cout << "1st number is the largest" << endl;
-    }
-  else {
-    if (vec[1] > vec[2]){
-    cout << "2nd is the largest" << endl;
-  }
-  else {
-    cout << "3rd is the largest" << endl;
-    
-  }
-  return 0;
+void swap(int a, int b)
+{
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+    cout << "a = " << a << " b = " << b << endl;
 }
- 
+
+int main()
+{
+  int a = 4, b = 6;
+  swap(a, b);
+  cout << "a = " << a << " b = " << b << endl;
+  return 0;
 }
