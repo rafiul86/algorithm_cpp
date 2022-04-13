@@ -13,16 +13,28 @@ using std::vector;
 
 
 
-void fn(int n){
-  if(n <= 10){
-    cout << n << " ";
-    fn(n+1);
+class Rectangle {
+
+public:
+  int length;
+  int breadth;
+
+  int area(){
+    return length * breadth;
   }
-}
+
+  int perimeter(){
+    return 2 * (length + breadth);
+  }
+  
+};
 
 int main() {
-  void (*f)(int);
-  f = fn;
-  f(1);
+  Rectangle r;
+  r.length = 10;
+  r.breadth = 20;
+
+  int area = r.area();
+  cout << "Area of rectangle is " << area << endl;
   return 0;
 }
