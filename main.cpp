@@ -13,15 +13,16 @@ using std::vector;
 
 
 
-
-
-void fun(int a){
-  cout << ++a << endl;
+void fn(int n){
+  if(n <= 10){
+    cout << n << " ";
+    fn(n+1);
+  }
 }
 
-int main(){
-  int x = 25;
-  fun(x);
-  
-  cout << "from main: " << x << endl;
+int main() {
+  void (*f)(int);
+  f = fn;
+  f(1);
+  return 0;
 }
