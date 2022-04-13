@@ -15,10 +15,24 @@ using std::vector;
 
 class Rectangle {
 
-public:
   int length;
   int breadth;
 
+public:
+
+  void setLength(int l){
+    length = l;
+  }
+  void setBreadth(int b){
+    breadth = b;
+  }
+  int getLength(){
+    return length;
+  }
+  int getBreadthth(){
+    return breadth;
+  }
+  
   int area(){
     return length * breadth;
   }
@@ -26,15 +40,17 @@ public:
   int perimeter(){
     return 2 * (length + breadth);
   }
-  
 };
 
 int main() {
   Rectangle r;
-  r.length = 10;
-  r.breadth = 20;
-
-  int area = r.area();
-  cout << "Area of rectangle is " << area << endl;
+  Rectangle *p;
+  p = &r;
+ 
+  p->setLength(5);
+  p->setBreadth(6);
+  cout << "Length of rectangle is " << p->getLength() << endl;
+  cout << "Breadth of rectangle is " << p->getBreadthth() << endl;
+  cout << "Area of rectangle is " << p->area() << endl;
   return 0;
 }
