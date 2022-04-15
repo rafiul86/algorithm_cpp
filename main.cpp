@@ -13,44 +13,20 @@ using std::vector;
 
 
 
-class Rectangle {
-
-  int length;
-  int breadth;
-
-public:
-
-  void setLength(int l){
-    length = l;
-  }
-  void setBreadth(int b){
-    breadth = b;
-  }
-  int getLength(){
-    return length;
-  }
-  int getBreadthth(){
-    return breadth;
-  }
-  
-  int area(){
-    return length * breadth;
-  }
-
-  int perimeter(){
-    return 2 * (length + breadth);
-  }
+class Base{
+  public:
+    Base(){cout<< "Non-paramiterized Base constructor"<<endl;}
+    Base(int x){cout<< "Paramiterized Base constructor: "<<x<< endl;}
 };
 
-int main() {
-  Rectangle r;
-  Rectangle *p;
-  p = &r;
- 
-  p->setLength(5);
-  p->setBreadth(6);
-  cout << "Length of rectangle is " << p->getLength() << endl;
-  cout << "Breadth of rectangle is " << p->getBreadthth() << endl;
-  cout << "Area of rectangle is " << p->area() << endl;
-  return 0;
+class Derived : public Base{
+  public:
+    Derived(){cout<< "Non-paramiterized Derived constructor"<<endl;}
+    Derived(int y){cout<< "Paramiterized Derived constructor: "<<y<< endl;}
+    Derived(int x, int y):Base(x)
+    {cout<< "Paramiterized Derived constructor and Base: "<<x<<" "<<y<< endl;}
+};
+
+int main(){
+  Derived D(5,2);
 }
