@@ -14,19 +14,9 @@ using std::string;
 using std::vector;
 #define PI 3.1416
 
-class Base {
-  public:
-  Base() { cout << "Base" << endl; }
-  Base(int x){cout << "Base x: "<< x<< endl;}
-};
-
-class Derived: public Base {
-  public:
-  Derived() { cout << "Derived" << endl; }
-  Derived(int y){cout<<"Derived y: " <<y<<endl;}
-  Derived(int x, int a):Base(a){cout<<"Base and Derived paramiterized: x " <<x <<" a: " <<a<<endl;}
-};
-int main(){
-  Derived d(2, 3);
-
+int main (){
+  int a[5] = {1,2,3,4,5};
+  for (int i = 0; i<5; i++){
+    cout << a[i] << endl;
+  }
 }
