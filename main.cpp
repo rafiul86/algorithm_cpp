@@ -15,8 +15,16 @@ using std::vector;
 #define PI 3.1416
 
 int main (){
-  int a[5] = {1,2,3,4,5};
-  for (int i = 0; i<5; i++){
-    cout << a[i] << endl;
+  vector<vector<int>> v = {{0, 1, 0, 0, 0, 0},
+{0, 1, 0, 0, 0, 0},
+{0, 1, 0, 0, 0, 0},
+{0, 1, 0, 0, 0, 0},
+{0, 0, 0, 0, 1, 0}};
+
+for(auto i:v){
+  for(int j:i){
+    cout << j << " ";
   }
+  cout << endl;
+}
 }
