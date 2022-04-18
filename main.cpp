@@ -17,9 +17,9 @@ using std::vector;
 #define PI 3.1416
 
 struct Date {
-  int day;
-  int year;
-  string month;
+  int day{0};
+  int year{0};
+  string month = "";
   
 };
 
