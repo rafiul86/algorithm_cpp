@@ -14,17 +14,11 @@ using std::string;
 using std::vector;
 #define PI 3.1416
 
-int main (){
-  vector<vector<int>> v = {{0, 1, 0, 0, 0, 0},
-{0, 1, 0, 0, 0, 0},
-{0, 1, 0, 0, 0, 0},
-{0, 1, 0, 0, 0, 0},
-{0, 0, 0, 0, 1, 0}};
-
-for(auto i:v){
-  for(int j:i){
-    cout << j << " ";
-  }
-  cout << endl;
-}
+int main(){
+  int a = 20;
+  int &b = a;
+  b++;
+  cout << "a = " << ++a <<  " b = " << b << endl;
+ 
+  cout << "a = " << a <<  " b = " << b << endl;
 }
