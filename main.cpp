@@ -19,10 +19,10 @@ using std::vector;
 class Date {
   // set variables to limit access 
   public:
-    Date();
-    int day;
-    int month;
-    int year;
+    Date(int , int , int );
+    int day{1};
+    int month{1};
+    int year{0};
   
   public:
     void setDay(int d){ d > 0 ? day = d : day = 1; }
@@ -32,13 +32,13 @@ class Date {
     int getMonth(){ return month; }
     int getYear(){ return year; }
 };
-Date::Date(){
-  day = 12;
-  month = 10;
-  year = 2000;
-}
+Date::Date(int d, int m, int y):  year(y) {
+  setDay(d);
+  setMonth(m);
+};
+
 
 int main() {
-  Date date;
+  Date date(-2, -4, -6);
   cout << "The date is : " << date.day << "/" << date.month << "/" << date.year << endl;
 }
