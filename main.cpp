@@ -17,22 +17,28 @@ using std::vector;
 #define PI 3.1416
 
 struct Date {
-  int day{0};
-  int year{0};
-  string month = "";
-  
+  // set variables to limit access 
+  private:
+    int day;
+    int month;
+    int year;
+    
+  public:
+    void setDay(int d){ day = d; }
+    void setMonth(int m){ month = m; }
+    void setYear(int y){ year = y; }
+    int getDay(){ return day; }
+    int getMonth(){ return month; }
+    int getYear(){ return year; }
 };
 
 int main() {
-  Date d;
-  d.day = 24;
-  d.month = "April";
-  d.year = 1986;
-  // Test the output
-  assert(d.day == 24);
-  assert(d.month == "April");
-  assert(d.year == 1986);
-
-  cout << "The day is " << d.day << "th " << d.month << " " << d.year << endl;
-  return 0;
+  Date date;
+  date.setDay(24);
+  date.setMonth(4);
+  date.setYear(1986);
+  int day = date.getDay();
+  int month = date.getMonth();
+  int year = date.getYear();
+  cout << "The date is : " << day << "/" << month << "/" << year << endl;
 }
