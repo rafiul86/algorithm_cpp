@@ -16,29 +16,29 @@ using std::string;
 using std::vector;
 #define PI 3.1416
 
-struct Date {
+class Date {
   // set variables to limit access 
-  private:
+  public:
+    Date();
     int day;
     int month;
     int year;
-    
+  
   public:
-    void setDay(int d){ day = d; }
-    void setMonth(int m){ month = m; }
-    void setYear(int y){ year = y; }
+    void setDay(int d){ d > 0 ? day = d : day = 1; }
+    void setMonth(int m){ m > 0 ? month = m : month = 1; }
+    void setYear(int y){ y > 0 ? year = y : year = 0; }
     int getDay(){ return day; }
     int getMonth(){ return month; }
     int getYear(){ return year; }
 };
+Date::Date(){
+  day = 12;
+  month = 10;
+  year = 2000;
+}
 
 int main() {
   Date date;
-  date.setDay(24);
-  date.setMonth(4);
-  date.setYear(1986);
-  int day = date.getDay();
-  int month = date.getMonth();
-  int year = date.getYear();
-  cout << "The date is : " << day << "/" << month << "/" << year << endl;
+  cout << "The date is : " << date.day << "/" << date.month << "/" << date.year << endl;
 }
