@@ -16,29 +16,28 @@ using std::string;
 using std::vector;
 #define PI 3.1416
 
-class Date {
-  // set variables to limit access 
+class Animal {
   public:
-    Date(int , int , int );
-    int day{1};
-    int month{1};
-    int year{0};
-  
-  public:
-    void setDay(int d){ d > 0 ? day = d : day = 1; }
-    void setMonth(int m){ m > 0 ? month = m : month = 1; }
-    void setYear(int y){ y > 0 ? year = y : year = 0; }
-    int getDay(){ return day; }
-    int getMonth(){ return month; }
-    int getYear(){ return year; }
-};
-Date::Date(int d, int m, int y):  year(y) {
-  setDay(d);
-  setMonth(m);
+   virtual void Talk () const = 0;
 };
 
+class Wolf:  public Animal  {
+  public:
+   void Talk () const override{
+      cout << "Loud" << endl;
+   };
+};
 
-int main() {
-  Date date(-2, -4, -6);
-  cout << "The date is : " << date.day << "/" << date.month << "/" << date.year << endl;
+class Dog: public Animal {
+  public:
+    void Talk() const override{
+      cout << "Silence" << endl;
+    }
+};
+
+int main(){
+  Dog d;
+  Wolf w;
+  d.Talk();
+  w.Talk();
 }
