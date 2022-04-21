@@ -18,19 +18,22 @@ using std::vector;
 
 class Animal {
   public:
-   virtual void Talk () const = 0;
+    virtual void Talk () const = 0;
 };
 
 class Wolf:  public Animal  {
   public:
-   void Talk () const override{
+   void Talk () const {
       cout << "Loud" << endl;
+   };
+   void Walk() const {
+      cout << "Walking" << endl;
    };
 };
 
 class Dog: public Animal {
   public:
-    void Talk() const override{
+    void Talk() const {
       cout << "Silence" << endl;
     }
 };
