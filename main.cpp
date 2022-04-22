@@ -1,11 +1,41 @@
-#include<stdio.h>
+#include<fstream>
+#include<iostream>
+#include<string>
+#include<vector>
+#include<algorithm>
+#include<cmath>
+#include<cstdlib>
+#include<ctime>
+#include<cstdio>
+
+using namespace std;
 
 
+class Animal {
+  public:
+    virtual void Talk () const = 0;
+};
 
+class Wolf:  public Animal  {
+  public:
+   void Talk () const {
+      cout << "Loud" << endl;
+   };
+   void Walk() const {
+      cout << "Walking" << endl;
+   };
+};
 
-int main()
-{
-int a{5};
-int b=a*42;
-printf("%d",b);
+class Dog: public Animal {
+  public:
+    void Talk() const {
+      cout << "Silence" << endl;
+    }
+};
+
+int main(){
+  Dog d;
+  Wolf w;
+  d.Talk();
+  w.Talk();
 }
