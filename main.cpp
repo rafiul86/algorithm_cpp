@@ -14,16 +14,23 @@ using namespace std;
 struct Rectangle {
   int length;
   int width;
+
+Rectangle(int l, int w) {
+  length = l;
+  width = w;
+}
+
+
+int area(){
+  return length*width;
+}
 };
 
-int area(Rectangle r){
-  return r.length*r.width;
-}
 int main(){
  int l,w;
  cin >> l >> w;
- Rectangle r;
+ Rectangle r(l, w);
   r.length = l;
   r.width = w;
-  cout << area(r) << endl;
+  cout << r.area() << endl;
 }
