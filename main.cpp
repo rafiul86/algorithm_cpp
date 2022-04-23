@@ -8,39 +8,42 @@
 #include<ctime>
 #include<cstdio>
 
+
 using namespace std;
 
-
+template<class T>
 class Rectangle {
 public:
-  int length;
-  int width;
+  T length;
+  T width;
 
-Rectangle(int l, int w) {
+Rectangle(T l, T w) {
   length = l;
   width = w;
 }
 
-int area();
-int perimeter();
+T area();
+T perimeter();
 
 ~Rectangle(){
   cout << "Destructor called" << endl;
-};
+  };
 };
 
-int Rectangle:: area(){
+template<class T>
+T Rectangle<T>:: area(){
   return length*width;
 };
 
-int Rectangle:: perimeter(){
+template<class T>
+T Rectangle<T>:: perimeter(){
   return 2*(length+width);
 };
 
 int main(){
  int l,w;
  cin >> l >> w;
- Rectangle r(l, w);
+ Rectangle<int> r(l, w);
  r.length = l;
  r.width = w;
  cout << r.area() << endl;
