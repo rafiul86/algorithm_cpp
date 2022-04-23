@@ -11,16 +11,19 @@
 using namespace std;
 
 
+struct Rectangle {
+  int length;
+  int width;
+};
 
-
+int area(Rectangle r){
+  return r.length*r.width;
+}
 int main(){
-  int a[6][5] {};
-
-  for (int row = 1; row <= 10; row++){
-    for(int col = 1; col <= 10 ; col++){
-      cout << row << " * " << col << " = " << row*col << endl;
-    }
-    cout<< "-------------" << endl;
-  }
-  cout<< endl;
+ int l,w;
+ cin >> l >> w;
+ Rectangle r;
+  r.length = l;
+  r.width = w;
+  cout << area(r) << endl;
 }
