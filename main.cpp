@@ -80,7 +80,10 @@ r.setLength(a);
 r.setWidth(b);
 cout << r.area() << endl;
 cout << r.perimeter() << endl;
+
+cout << *len << " " << *wid << endl;
 delete len;
 delete wid;
+
 return 0;
 }
