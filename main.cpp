@@ -21,9 +21,20 @@ Rectangle(int l, int w) {
   width = w;
 }
 
-int area(){
+int area();
+int perimeter();
+
+~Rectangle(){
+  cout << "Destructor called" << endl;
+};
+};
+
+int Rectangle:: area(){
   return length*width;
-}
+};
+
+int Rectangle:: perimeter(){
+  return 2*(length+width);
 };
 
 int main(){
@@ -33,4 +44,6 @@ int main(){
  r.length = l;
  r.width = w;
  cout << r.area() << endl;
+ cout << r.perimeter() << endl;
+ return 0;
 }
