@@ -18,8 +18,8 @@ public:
   T width;
 
 Rectangle(T l, T w) {
-  length = l;
-  width = w;
+  this->length = l;
+  this->width = w;
 }
 
 T area();
