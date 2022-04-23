@@ -68,13 +68,19 @@ T Rectangle<T>:: perimeter(){
 };
 
 int main(){
-int len;
-int wid;
+int a;
+int b;
+int* len;
+int* wid;
+len = &a;
+wid = &b;
 Rectangle<int> r;
-cin >> len >> wid;
-r.setLength(len);
-r.setWidth(wid);
+cin >> a >> b;
+r.setLength(a);
+r.setWidth(b);
 cout << r.area() << endl;
 cout << r.perimeter() << endl;
+delete len;
+delete wid;
 return 0;
 }
