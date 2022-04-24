@@ -68,22 +68,19 @@ T Rectangle<T>:: perimeter(){
 };
 
 int main(){
-int a;
-int b;
-int* len;
-int* wid;
-len = &a;
-wid = &b;
-Rectangle<int> r;
-cin >> a >> b;
-r.setLength(a);
-r.setWidth(b);
-cout << r.area() << endl;
-cout << r.perimeter() << endl;
 
-cout << *len << " " << *wid << endl;
-delete len;
-delete wid;
+string s1 = "Hello";
+string s2 = {"hello"};
+string s3 = {"HELLO", 3};
+string s4 = {"HELLO", 0, 3};
+
+string s6 = {s1};
+cout << s1 << endl;
+cout << s2 << endl;
+cout << s3 << endl;
+cout << s4 << endl;
+
+cout << s6 << endl;
 
 return 0;
 }
