@@ -1,24 +1,26 @@
 #include <iostream>
 #include <string>
 #include<cmath>
-using namespace std;
+#include<vector>
 
-int print_array( int my_num[], int size){
-  for(int i=0; i<size ;i++){
-    
-    cout<<my_num[i]<<" ";
+void print(const std::vector<std::string> &v);
+
+
+int main(){
+  std::vector<std::string> a{"Larry", "Moe", "Curley"};
+  for(auto i:a){
+    std::cout << i << std::endl;
   }
-  cout<<endl;
+  print(a);
   return 0;
 }
 
 
-int main() {
-  int arr[5] = {1,2,3,4,5};
-  print_array(arr, 5);
-  for(int i=0; i<5 ;i++){
-    arr[3] = 333;
-    cout<<arr[i]<<" ";
+void print(const std::vector<std::string> &v){
+  
+  for(auto i:v){
+    std::cout << i << std::endl;
   }
-  return 0;
+  
 }
+
