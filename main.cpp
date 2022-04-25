@@ -3,9 +3,13 @@
 #include<cmath>
 using namespace std;
 
+void fun(int n){
+  if(n>0){
+    fun(n-1);
+    cout << n << " ";
+  }
+}
+
 int main() {
-    cout<< sqrt(400) << endl;
-    double result = pow(2.1,3.2);
-    cout << result << endl;
-    return 0;
+    fun(3);
 }
