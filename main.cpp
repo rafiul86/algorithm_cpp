@@ -3,13 +3,21 @@
 #include<cmath>
 using namespace std;
 
-void fun(int n){
-  if(n>0){
-    fun(n-1);
-    cout << n << " ";
-  }
+int fun(int n){
+  return n/2;
+}
+
+int fun(int n, int m){
+  return n*m;
+}
+
+int fun(int n, int m, int o){
+  int x = n + m + o;
+  return x;
 }
 
 int main() {
-    fun(3);
+  cout << "Division : " << fun(6) << endl;
+  cout << "Multiplication : " <<  fun(5, 10) << endl;
+  cout << "Addition : " << fun(5, 10, 15) << endl;
 }
