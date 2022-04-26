@@ -3,24 +3,21 @@
 #include<cmath>
 #include<vector>
 
-void print(const std::vector<std::string> &v);
+int print(int x);
 
 
 int main(){
-  std::vector<std::string> a{"Larry", "Moe", "Curley"};
-  for(auto i:a){
-    std::cout << i << std::endl;
-  }
-  print(a);
+  print(5);
   return 0;
 }
 
 
-void print(const std::vector<std::string> &v){
+int print(int x){
   
-  for(auto i:v){
-    std::cout << i << std::endl;
+  if(x > 0){ 
+    print(x-1);
+    std::cout << x << std::endl;
   }
-  
+  return 0;
 }
 
