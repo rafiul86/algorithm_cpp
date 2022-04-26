@@ -1,23 +1,14 @@
-#include <iostream>
-#include <string>
-#include<cmath>
-#include<vector>
+#include<iostream>
+#include<fstream>
 
-int print(int x);
-
+void recur(int n){
+    if(n > 0){
+    std::cout << n << " ";
+    recur(n-1);
+    recur(n-1);
+    }
+}
 
 int main(){
-  print(5);
-  return 0;
+recur(5);
 }
-
-
-int print(int x){
-  
-  if(x > 0){ 
-    print(x-1);
-    std::cout << x << std::endl;
-  }
-  return 0;
-}
-
