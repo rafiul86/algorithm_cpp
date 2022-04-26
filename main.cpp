@@ -1,14 +1,17 @@
 #include<iostream>
 #include<fstream>
 
-void recur(int n){
-    if(n > 0){
-    std::cout << n << " ";
-    recur(n-1);
-    recur(n-1);
-    }
+int sum(int n){
+   if (n == 0)
+      return 1;
+   else{
+       return n * sum(n-1);
+   }
+      
 }
 
 int main(){
-recur(5);
+int natural_total = sum(6);
+std::cout<<"The total of the natural numbers from 1 to 5 is "<<natural_total<<std::endl;
+return 0;
 }
