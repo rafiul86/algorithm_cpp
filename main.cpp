@@ -1,5 +1,6 @@
 #include<iostream>
 #include<fstream>
+#include<cmath>
 
 int sum(int n){
    if (n == 0)
@@ -11,7 +12,5 @@ int sum(int n){
 }
 
 int main(){
-int natural_total = sum(6);
-std::cout<<"The total of the natural numbers from 1 to 5 is "<<natural_total<<std::endl;
-return 0;
+std::cout << pow(2,8) << std::endl;
 }
