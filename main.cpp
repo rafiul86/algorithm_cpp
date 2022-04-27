@@ -2,15 +2,16 @@
 #include<fstream>
 #include<cmath>
 
-int sum(int n){
+int fact(int n){
    if (n == 0)
       return 1;
    else{
-       return n * sum(n-1);
+       return fact(n-1)*n;
    }
       
 }
 
 int main(){
-std::cout << pow(2,8) << std::endl;
+int fac = fact(6);
+std::cout << fac << std::endl;
 }
