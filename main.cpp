@@ -16,7 +16,7 @@ for(int i = 0; i < nThreads; i++){
     }));
 }
 
-std::for_each(threads.begin(), threads.end(), [](std::thread& t){
+ for_each(threads.begin(), threads.end(), [](std::thread& t){
     t.join();
 });
 return 0;
