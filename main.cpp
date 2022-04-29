@@ -1,17 +1,23 @@
-#include<iostream>
-#include<fstream>
-#include<cmath>
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <thread>
+#include <vector>
 
-int fact(int n){
-   if (n == 0)
-      return 1;
-   else{
-       return fact(n-1)*n;
-   }
-      
-}
+
+
 
 int main(){
-int fac = fact(6);
-std::cout << fac << std::endl;
+std::vector<std::thread> threads;
+int nThreads = 4;
+for(int i = 0; i < nThreads; i++){
+    threads.emplace_back(std::thread([](){
+        while(true);
+    }));
+}
+
+std::for_each(threads.begin(), threads.end(), [](std::thread& t){
+    t.join();
+});
+return 0;
 }
