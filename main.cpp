@@ -8,16 +8,9 @@
 
 
 int main(){
-std::vector<std::thread> threads;
-int nThreads = 4;
-for(int i = 0; i < nThreads; i++){
-    threads.emplace_back(std::thread([](){
-        while(true);
-    }));
-}
-
- for_each(threads.begin(), threads.end(), [](std::thread& t){
-    t.join();
-});
+int fav_num;
+std::cout << "Enter your favorite number: ";
+std::cin >> fav_num;
+std::cout << "Your favorite number is " << fav_num << std::endl;
 return 0;
 }
