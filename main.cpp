@@ -9,12 +9,15 @@ using namespace std;
 OF THE PROGRAM */
 
 struct Person {
-    string name;
+    int name;
     int age;
+    char c;
 } r, r2, r3;
 
 int main(){
-r = {"John", 20};
-cout << r.name << " " << r.age << endl;
+int a = 11;
+int *p = &a;
+cout << &a << endl;
+cout << p << endl;
 return 0;
 }
