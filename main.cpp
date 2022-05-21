@@ -11,10 +11,10 @@ OF THE PROGRAM */
 struct Person {
     string name;
     int age;
-};
+} r, r2, r3;
 
 int main(){
-struct Person person = {"John", 20};
-cout << person.name << " " << person.age << endl;
+r = {"John", 20};
+cout << r.name << " " << r.age << endl;
 return 0;
 }
