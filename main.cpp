@@ -4,29 +4,19 @@
 #include <cmath>
 #include <thread>
 #include <vector>
-using std::cout;
-using std::cin;
-using std::endl;
-using std::ifstream;
-using std::string;
+
+
 /* ENTRY POINT 
 OF THE PROGRAM */
 
-struct Person {
-    int name;
-    int age;
-    char c;
-} r, r2, r3;
+
 
 int main(){
-
-int a = 10;
-int &r = a;
-cout << a << " and " << r << endl;
-int b = 20;
-r = b;
-r = 30;
-cout << a << " and " << r << endl;
-cout << a << " and " << b <<  " and " << r << endl;
+    std::cout << "int: " << sizeof(int) << std::endl;
+    std::cout << "float: "<< sizeof(float) << std::endl;
+    std::cout << "double: "<< sizeof(long double) << std::endl;
+    std::cout << "char: " << sizeof(char) << std::endl;
+    std::cout << "string: " << sizeof(std::string) << std::endl;
+    std::cout << "long: " << sizeof(long long) << std::endl;
 return 0;
 }
